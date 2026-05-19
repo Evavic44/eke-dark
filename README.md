@@ -1,8 +1,10 @@
+<img src="/assets/icon.png" width="100px" height="100px" alt="adocs logo" />
+
 # Eke Dark
 
 A two-tone chrome color theme with teal accents and fully-colored syntax. (Also includes light variants.)
 
-![Eke Dark screenshot placeholder]('assets/showcase.png')
+![Eke Dark screenshot placeholder](https://github.com/user-attachments/assets/4723f167-faa5-464d-b4ba-504d11515de1)
 
 ## Why
 
@@ -60,7 +62,7 @@ Eke Dark ships four variants. The non-italic versions are the default — they w
 3. Click **Install**
 4. Open the Command Palette (`Cmd+Shift+P`) → **Preferences: Color Theme** and pick one of the four Eke variants
 
-![Marketplace install screenshot placeholder](assets/install-marketplace.png)
+![Marketplace install screenshot placeholder](https://github.com/user-attachments/assets/4723f167-faa5-464d-b4ba-504d11515de1)
 
 ### Manual install
 
@@ -79,7 +81,7 @@ If you'd rather not use the Marketplace, you can install Eke Dark as a local ext
 2. Restart VS Code.
 3. Open the Command Palette → **Preferences: Color Theme** and pick an Eke variant.
 
-![Manual install screenshot placeholder](assets/install-manual.png)
+![Manual install screenshot placeholder](https://github.com/user-attachments/assets/4723f167-faa5-464d-b4ba-504d11515de1)
 
 ## Recommended Setup
 
