@@ -1,5 +1,3 @@
-<img src="/assets/icon.png" width="100px" height="100px" alt="adocs logo" />
-
 # Eke Dark
 
 A two-tone chrome color theme with teal accents and fully-colored syntax. (Also includes light variants.)
