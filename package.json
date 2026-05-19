@@ -1,0 +1,58 @@
+{
+  "name": "eke-dark",
+  "displayName": "Eke Dark",
+  "description": "A two-tone chrome color theme with teal accents and fully-colored syntax. Dark and light variants, with optional italics.",
+  "version": "1.0.0",
+  "publisher": "victoreke",
+  "icon": "assets/icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color theme",
+    "dark theme",
+    "light theme",
+    "teal"
+  ],
+  "galleryBanner": {
+    "color": "#191a1c",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Evavic44/eke-dark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Evavic44/eke-dark/issues"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Eke Light",
+        "uiTheme": "vs",
+        "path": "./themes/eke-light.json"
+      },
+      {
+        "label": "Eke Light Italic",
+        "uiTheme": "vs",
+        "path": "./themes/eke-light-italic.json"
+      },
+      {
+        "label": "Eke Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/eke-dark.json"
+      },
+      {
+        "label": "Eke Dark Italic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/eke-dark-italic.json"
+      }
+    ]
+  },
+  "author": "Victor Eke",
+  "license": "MIT"
+}
