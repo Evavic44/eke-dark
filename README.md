@@ -4,7 +4,7 @@ A two-tone chrome color theme with teal accents and fully-colored syntax. (Also 
 
 ![Eke Dark screenshot placeholder](https://github.com/user-attachments/assets/681ab9b3-6027-4d7d-baee-1931f33e375e)
 
-## Why another theme? 
+## Why another theme?
 
 Eke Dark exists for two reasons:
 
@@ -15,6 +15,7 @@ Eke Dark exists for two reasons:
 The chrome takes visual cues from [JetBrains' Islands theme][islands] — the two-tone separation between editor and surrounding panels, the calm restrained palette. The syntax scheme is built from scratch around the principle that _every meaningful token should have a color_.
 
 ## Variants
+
 Eke Dark ships in **Dark** and **Light** variants, each with an optional **Italic** version that styles comments and parameters in italic. The non-italic versions are the default. (They work with any monospace font with italic glyphs see [Recommended Setup](#recommended-setup)).
 
 ## Features
@@ -55,11 +56,12 @@ Eke Dark ships in **Dark** and **Light** variants, each with an optional **Itali
 
 1. Download the latest `.vsix` from the [Releases page](https://github.com/Evavic44/eke-dark/releases)
 2. Install it via the command line:
+
 ```bash
    code --install-extension eke-dark-1.0.0.vsix
 ```
-   Or in VS Code: open the Extensions sidebar → `...` menu → **Install from VSIX**
-3. Open the Command Palette → **Preferences: Color Theme** and pick an Eke variant
+
+Or in VS Code: open the Extensions sidebar → `...` menu → **Install from VSIX** 3. Open the Command Palette → **Preferences: Color Theme** and pick an Eke variant
 
 2. Restart VS Code.
 3. Open the Command Palette → **Preferences: Color Theme** and pick an Eke variant.
@@ -88,6 +90,28 @@ Eke Dark is tuned against specific typography. You don't need to match it, but t
 }
 ```
 
+## Contributing
+
+Contributions are welcome. Color fixes, additional language scopes, and chrome polish especially. The theme is plain JSON with no build step, so getting it running locally takes about a minute:
+
+1. Fork and clone the repository, then open it in VS Code:
+
+```bash
+   git clone https://github.com/<your-username>/eke-dark.git
+   cd eke-dark
+   code .
+```
+
+2. Press <kbd>F5</kbd> (or **Run → Start Debugging**) to launch an **Extension Development Host** — a second VS Code window with the theme loaded.
+3. In that window, open the Command Palette → **Preferences: Color Theme** and pick an Eke variant.
+4. Edit any file in [themes/](themes/) and save. Changes apply live in the host window; run **Developer: Reload Window** there if one doesn't show up.
+
+To find the scope behind a given token, run **Developer: Inspect Editor Tokens and Scopes** in the host window and click the token.
+
+Remember that the four variants (`eke-dark`, `eke-dark-italic`, `eke-light`, `eke-light-italic`) need to stay in sync, and that most tokens need entries in both `tokenColors` and `semanticTokenColors`.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guidelines, palette rules, and pull request checklist.
+
 ## Credits
 
 - **[Islands theme][islands]** by JetBrains — chrome inspiration: two-tone separation, calm palette, the overall "softer, lighter" approach to UI.
@@ -97,6 +121,7 @@ Eke Dark is tuned against specific typography. You don't need to match it, but t
 - **[Nerd Fonts][nerd-fonts]** — the patching project that produces Agave Nerd Font Mono with icon glyphs.
 
 <!-- LINKS -->
+
 [islands]: https://blog.jetbrains.com/platform/2025/12/meet-the-islands-theme-the-new-default-look-for-jetbrains-ides/
 [yo-code]: https://code.visualstudio.com/api/get-started/your-first-extension
 [google-sans-code]: https://fonts.google.com/specimen/Google+Sans+Code
