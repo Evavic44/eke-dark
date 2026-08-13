@@ -5,8 +5,6 @@ All notable changes to the "eke-dark" theme will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
 ### Added
 
 - 91 previously unstyled UI keys, which had been falling back to VS Code's defaults: explorer indent guides, list filter matches, status bar item states, the debug stack-frame highlight and toolbar, quick-pick groups, toolbars, checkboxes, settings rows, notebooks, chat and inline chat, merge editor, staged/submodule git decorations, problem icons, and the unexpected-bracket color.
