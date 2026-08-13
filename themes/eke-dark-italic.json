@@ -735,6 +735,55 @@
       }
     },
     {
+      "name": "Entity",
+      "scope": [
+        "entity",
+        "entity.name"
+      ],
+      "settings": {
+        "foreground": "#42D4BA"
+      }
+    },
+    {
+      "name": "Inherited Class",
+      "scope": [
+        "entity.other.inherited-class"
+      ],
+      "settings": {
+        "foreground": "#42D4BA"
+      }
+    },
+    {
+      "name": "Label",
+      "scope": [
+        "entity.name.label",
+        "entity.name.goto-label"
+      ],
+      "settings": {
+        "foreground": "#D2A8FF"
+      }
+    },
+    {
+      "name": "Entity Operator",
+      "scope": [
+        "entity.name.operator"
+      ],
+      "settings": {
+        "foreground": "#E5A070"
+      }
+    },
+    {
+      "name": "Character Entity",
+      "scope": [
+        "constant.character.entity",
+        "punctuation.definition.entity.html",
+        "punctuation.definition.entity.xml"
+      ],
+      "settings": {
+        "foreground": "#E5A070"
+      }
+    },
+    {
       "name": "Support Constant",
       "scope": [
         "support.constant",
