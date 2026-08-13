@@ -15,15 +15,24 @@ Before opening a pull request for anything larger than a single color tweak, ple
 
 ```
 themes/
-  eke-dark.json          # Dark variant
-  eke-dark-italic.json   # Dark + italic comments/parameters
-  eke-light.json         # Light variant
-  eke-light-italic.json  # Light + italic comments/parameters
+  eke-dark.json          # Dark variant          <- edit this
+  eke-dark-italic.json   # Dark + italics        <- generated
+  eke-light.json         # Light variant         <- edit this
+  eke-light-italic.json  # Light + italics       <- generated
+scripts/
+  italic-scopes.json     # Which scopes get italics, per variant
+  build-italics.mjs      # Regenerates the two *-italic.json files
+  validate-themes.mjs    # Parity + contrast checks (npm test)
 assets/
   icon.png               # Marketplace icon
 package.json             # Extension manifest; registers the four themes
 CHANGELOG.md
 ```
+
+**Only the two base files are hand-edited.** The italic variants are generated from them by
+`npm run build`, so a color can only ever be defined in one place. If you want a scope to be
+italic, add its rule name to `scripts/italic-scopes.json` and rebuild — don't edit the generated
+files directly, `npm test` will fail if they've drifted from their base.
 
 Each theme file has three sections:
 
@@ -84,10 +93,12 @@ code --install-extension eke-dark-<version>.vsix
 
 ## Guidelines
 
-- **Keep the four variants in sync.** A change to `eke-dark.json` almost always needs the equivalent change in `eke-dark-italic.json`, and a light-variant counterpart in both light files. The italic files differ from their base only in `fontStyle`.
+- **Run `npm test` before you push.** It checks that all four variants declare the same keys and scopes, that every color is legible against the background it sits on, and that the generated italic files are current. It runs automatically on `vsce package`.
+- **Keep dark and light in sync.** A change to `eke-dark.json` almost always needs a counterpart in `eke-light.json`. The italic variants take care of themselves — run `npm run build` and commit the result.
 - **Stay within the palette.** New colors should be drawn from the [syntax palette in the README](README.md#syntax-palette-dark) or be a deliberate, justified addition. Say why in the PR if you're introducing a new hue.
 - **Every meaningful token gets a color.** This is the core principle of the theme — if you find a token rendering at the default foreground, that's a bug worth fixing.
-- **Check contrast.** Aim for a WCAG AA contrast ratio (4.5:1) against the relevant background: `#191a1c` for the dark editor, and the sidebar/status bar backgrounds for chrome colors.
+- **Avoid near-duplicate colors.** If two hexes are a handful of units apart, nobody can tell them apart but everyone has to keep them in step. Either collapse them into one or move them far enough to actually read as different.
+- **Check contrast.** `npm test` enforces the floors (3:1 for syntax and chrome, 2:1 for ANSI colors), but aim for WCAG AA (4.5:1) on anything you expect people to read for long stretches.
 - **Check both light and dark.** A color that reads well on the dark background often disappears on the light one.
 - **Don't bump the version** in `package.json` — that happens at release time.
 

@@ -1,0 +1,43 @@
+{
+  "$comment": [
+    "Source of truth for the italic theme variants. The *-italic.json files under themes/",
+    "are generated from their base theme by `npm run build` -- never edit them by hand.",
+    "Colors always come from the base file, so the two variants can never drift apart.",
+    "Only the scopes listed here differ, by gaining fontStyle: italic.",
+    "Note: 'Doc Comment' is intentionally italic in dark only -- doc comments already read",
+    "as a distinct green there, and italicising them in light hurt legibility."
+  ],
+  "variants": [
+    {
+      "base": "eke-dark.json",
+      "out": "eke-dark-italic.json",
+      "name": "Eke Dark Italic",
+      "tokenColors": [
+        "Comment",
+        "Doc Comment",
+        "Static Method",
+        "Constant Variable",
+        "Static Property",
+        "Markdown Italic",
+        "Markdown Quote",
+        "TODO"
+      ],
+      "semanticTokenColors": ["method.static", "property.readonly", "property.static"]
+    },
+    {
+      "base": "eke-light.json",
+      "out": "eke-light-italic.json",
+      "name": "Eke Light Italic",
+      "tokenColors": [
+        "Comment",
+        "Static Method",
+        "Constant Variable",
+        "Static Property",
+        "Markdown Italic",
+        "Markdown Quote",
+        "TODO"
+      ],
+      "semanticTokenColors": ["method.static", "property.readonly", "property.static"]
+    }
+  ]
+}
