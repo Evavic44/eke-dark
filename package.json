@@ -8,6 +8,11 @@
   "engines": {
     "vscode": "^1.74.0"
   },
+  "scripts": {
+    "build": "node scripts/build-italics.mjs",
+    "test": "node scripts/validate-themes.mjs",
+    "vscode:prepublish": "npm test"
+  },
   "categories": [
     "Themes"
   ],

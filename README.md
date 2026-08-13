@@ -36,12 +36,17 @@ Eke Dark ships in **Dark** and **Light** variants, each with an optional **Itali
 | String                     | ![#7FCC85](https://placehold.co/12x12/7FCC85/7FCC85) | `#7FCC85` |
 | Number                     | ![#3CC8D4](https://placehold.co/12x12/3CC8D4/3CC8D4) | `#3CC8D4` |
 | Class / Type / Variable    | ![#42D4BA](https://placehold.co/12x12/42D4BA/42D4BA) | `#42D4BA` |
-| Interface / Type Parameter | ![#28D6C6](https://placehold.co/12x12/28D6C6/28D6C6) | `#28D6C6` |
-| Property / Constant        | ![#D2A8FF](https://placehold.co/12x12/D2A8FF/D2A8FF) | `#D2A8FF` |
+| Property access            | ![#79E3D2](https://placehold.co/12x12/79E3D2/79E3D2) | `#79E3D2` |
+| Constant / Key / Attribute | ![#D2A8FF](https://placehold.co/12x12/D2A8FF/D2A8FF) | `#D2A8FF` |
 | Comment                    | ![#7a7e85](https://placehold.co/12x12/7a7e85/7a7e85) | `#7a7e85` |
 | Decorator                  | ![#CCC76E](https://placehold.co/12x12/CCC76E/CCC76E) | `#CCC76E` |
 | RegExp                     | ![#58D8E8](https://placehold.co/12x12/58D8E8/58D8E8) | `#58D8E8` |
 | Tag (HTML)                 | ![#6BB0EA](https://placehold.co/12x12/6BB0EA/6BB0EA) | `#6BB0EA` |
+
+Property access is a lighter tint of the variable color rather than a separate hue, so a chain
+like `user.profile.name` stays one visual family while each link still reads as distinct. Where a
+property is being _declared_ — an object literal key, a JSON key, an enum member — it takes the
+constant purple instead.
 
 ## Installation
 
