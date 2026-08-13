@@ -37,7 +37,7 @@ Eke Dark ships in **Dark** and **Light** variants, each with an optional **Itali
 | Number                     | ![#3CC8D4](https://placehold.co/12x12/3CC8D4/3CC8D4) | `#3CC8D4` |
 | Class / Type / Variable    | ![#42D4BA](https://placehold.co/12x12/42D4BA/42D4BA) | `#42D4BA` |
 | Interface / Type Parameter | ![#28D6C6](https://placehold.co/12x12/28D6C6/28D6C6) | `#28D6C6` |
-| Property / Constant        | ![#E08FD4](https://placehold.co/12x12/E08FD4/E08FD4) | `#E08FD4` |
+| Property / Constant        | ![#D2A8FF](https://placehold.co/12x12/D2A8FF/D2A8FF) | `#D2A8FF` |
 | Comment                    | ![#7a7e85](https://placehold.co/12x12/7a7e85/7a7e85) | `#7a7e85` |
 | Decorator                  | ![#CCC76E](https://placehold.co/12x12/CCC76E/CCC76E) | `#CCC76E` |
 | RegExp                     | ![#58D8E8](https://placehold.co/12x12/58D8E8/58D8E8) | `#58D8E8` |
@@ -102,7 +102,7 @@ Contributions are welcome. Color fixes, additional language scopes, and chrome p
    code .
 ```
 
-   Open the repository folder itself as the workspace root, or the next step won't find the debug configuration.
+Open the repository folder itself as the workspace root, or the next step won't find the debug configuration.
 
 2. Press <kbd>F5</kbd> (or **Run → Start Debugging**) to launch an **Extension Development Host** — a second VS Code window with the theme loaded. This uses the checked-in `.vscode/launch.json`; see [CONTRIBUTING.md](CONTRIBUTING.md#running-the-theme-locally) if <kbd>F5</kbd> doesn't start it.
 3. In that window, open the Command Palette → **Preferences: Color Theme** and pick an Eke variant.
