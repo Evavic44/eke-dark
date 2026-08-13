@@ -37,16 +37,33 @@ A token often needs an entry in **both** `tokenColors` and `semanticTokenColors`
 
 You need [VS Code](https://code.visualstudio.com/) and [Git](https://git-scm.com/). There is no build step and no dependencies to install — the extension is plain JSON.
 
-1. Fork and clone the repository:
+1. Fork and clone the repository, then open the folder in VS Code:
 
    ```bash
    git clone https://github.com/<your-username>/eke-dark.git
    cd eke-dark
+   code .
    ```
 
-2. Press <kbd>F5</kbd> (or **Run → Start Debugging**). This launches an **Extension Development Host** — a second VS Code window with the theme loaded.
+   You must open the repository folder itself as the workspace root — pressing <kbd>F5</kbd> from a parent folder or a multi-root workspace will not pick up the debug configuration.
 
-   If prompted to select a debug configuration, choose **VS Code Extension Development**.
+2. Press <kbd>F5</kbd> (or **Run → Start Debugging**). This uses the checked-in `.vscode/launch.json` (**Run Extension**) to launch an **Extension Development Host** — a second VS Code window with the theme loaded.
+
+   If <kbd>F5</kbd> does nothing, opens a language-specific debugger, or asks you to select an environment, the launch configuration isn't being found. Confirm `.vscode/launch.json` exists at the repository root; if it's missing, create it with:
+
+   ```json
+   {
+     "version": "0.2.0",
+     "configurations": [
+       {
+         "name": "Run Extension",
+         "type": "extensionHost",
+         "request": "launch",
+         "args": ["--extensionDevelopmentPath=${workspaceFolder}"]
+       }
+     ]
+   }
+   ```
 
 3. In the new window, open the Command Palette (`Ctrl+Shift+P`, `Cmd+Shift+P` on macOS) → **Preferences: Color Theme** → pick an Eke variant.
 

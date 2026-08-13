@@ -102,7 +102,9 @@ Contributions are welcome. Color fixes, additional language scopes, and chrome p
    code .
 ```
 
-2. Press <kbd>F5</kbd> (or **Run → Start Debugging**) to launch an **Extension Development Host** — a second VS Code window with the theme loaded.
+   Open the repository folder itself as the workspace root, or the next step won't find the debug configuration.
+
+2. Press <kbd>F5</kbd> (or **Run → Start Debugging**) to launch an **Extension Development Host** — a second VS Code window with the theme loaded. This uses the checked-in `.vscode/launch.json`; see [CONTRIBUTING.md](CONTRIBUTING.md#running-the-theme-locally) if <kbd>F5</kbd> doesn't start it.
 3. In that window, open the Command Palette → **Preferences: Color Theme** and pick an Eke variant.
 4. Edit any file in [themes/](themes/) and save. Changes apply live in the host window; run **Developer: Reload Window** there if one doesn't show up.
 
