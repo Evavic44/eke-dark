@@ -25,6 +25,8 @@ scripts/
   validate-themes.mjs    # Parity + contrast checks (npm test)
 assets/
   icon.png               # Marketplace icon
+docs/
+  PUBLISHING.md          # Maintainer-only: Marketplace release steps
 package.json             # Extension manifest; registers the four themes
 CHANGELOG.md
 ```
@@ -100,7 +102,7 @@ code --install-extension eke-dark-<version>.vsix
 - **Avoid near-duplicate colors.** If two hexes are a handful of units apart, nobody can tell them apart but everyone has to keep them in step. Either collapse them into one or move them far enough to actually read as different.
 - **Check contrast.** `npm test` enforces the floors (3:1 for syntax and chrome, 2:1 for ANSI colors), but aim for WCAG AA (4.5:1) on anything you expect people to read for long stretches.
 - **Check both light and dark.** A color that reads well on the dark background often disappears on the light one.
-- **Don't bump the version** in `package.json` — that happens at release time.
+- **Don't bump the version** in `package.json` — that happens at release time. Maintainers: see [docs/PUBLISHING.md](docs/PUBLISHING.md).
 
 ## Submitting a pull request
 

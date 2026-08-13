@@ -7,3 +7,4 @@ node_modules/**
 scripts/**
 package-lock.json
 CONTRIBUTING.md
+docs/**
