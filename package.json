@@ -2,7 +2,7 @@
   "name": "eke-dark",
   "displayName": "Eke Dark",
   "description": "A two-tone chrome color theme with teal accents and fully-colored syntax. Dark and light variants, with optional italics.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "victoreke",
   "icon": "assets/icon.png",
   "engines": {
